@@ -6,11 +6,11 @@
   "author": "Nicholas Van Doorn",
   "license": "MIT",
   "dependencies": {
-    "babel-loader": "^8.0.5",
     "react": "^16.8.6",
     "use-sunlight": "^1.0.1"
   },
   "devDependencies": {
+    "babel-loader": "^8.0.5",
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "@babel/preset-react": "^7.0.0",
