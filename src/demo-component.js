@@ -2,7 +2,6 @@
 // to handle the `css` prop at build time
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
-import React from 'react'
 import { SunlightTheme } from './sunlight-theme'
 import { css } from '@emotion/core'
 import colormap from 'colormap'
