@@ -15,7 +15,7 @@ export const SunlightTheme = ({ children, middleware }) => {
   const [lightLevel] = useSunlight()
   const theme = { lightLevel }
   // if we have at least one middleware function,
-  // them in a pipe (left to right),
+  // apply them in a pipe (left to right)
   const transformedTheme =
     middleware && middleware.length ? pipe(...middleware)(theme) : theme
   return <ThemeProvider theme={transformedTheme}>{children}</ThemeProvider>
