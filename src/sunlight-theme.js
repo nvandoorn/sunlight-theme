@@ -2,13 +2,14 @@ import React from 'react'
 import { useSunlight } from 'use-sunlight'
 import { ThemeProvider } from 'emotion-theming'
 
-const isFn = t => typeof t === 'function'
+const notFn = t => typeof t !== 'function'
 
-const pipeReducer = (a, b) => arg => {
-  if (!isFn(a) || !isFn(b)) throw new Error('Middleware has to be function')
-  return b(a(arg))
+const pipeReducer = (a, b) => arg => b(a(arg))
+
+const pipe = (...fns) => {
+  if (fns.some(notFn)) throw new Error('All middleware must be a function')
+  return fns.reduce(pipeReducer, k => k)
 }
-const pipe = (...ops) => ops.reduce(pipeReducer)
 
 export const SunlightTheme = ({ children, middleware }) => {
   const [lightLevel] = useSunlight()
