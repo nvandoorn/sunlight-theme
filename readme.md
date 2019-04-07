@@ -1,5 +1,7 @@
 # sunlight-theme
 
+[![CircleCI](https://circleci.com/gh/nvandoorn/sunlight-theme.svg?style=shield)](https://circleci.com/gh/nvandoorn/sunlight-theme)
+
 A theme provider for `@emotion/core` and `emotion-theming` that supplies the level of sunlight with `use-sunlight`. Supports middleware via a prop.
 
 ## Demo
